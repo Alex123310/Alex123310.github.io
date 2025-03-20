@@ -45,25 +45,24 @@
 }
 
 #glory{
+    margin:5%;
     object-fit: contain; 
-    width: 100%; 
-    height: 100%;
+    width: 90%;
 }
 
 #catspin{
-    animation-name: spinkitty;
+    animation-name: spin360;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+
     object-fit: contain;
     width: 10%;
     height: 25%;
-    margin-left:300px;
+    margin:3% 40%;
+
 }
 
-@keyframes spinkitty{
-    from{
-        transform: rotate(0deg);
-    }
+@keyframes spin360{
     to{
         transform: rotate(360deg);
     }
