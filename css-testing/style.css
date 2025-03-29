@@ -1,8 +1,9 @@
 .flexible-container{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     background-color: rgba(19, 79, 139, 0.76);
     margin: 10%;
+    justify-content: center;
 }
 
 .flexible-container > div{
