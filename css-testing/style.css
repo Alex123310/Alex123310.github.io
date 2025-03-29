@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: nowrap;
     background-color: rgba(19, 79, 139, 0.76);
+    margin: 10%;
 }
 
 .flexible-container > div{
