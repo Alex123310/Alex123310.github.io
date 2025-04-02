@@ -1,0 +1,39 @@
+<HTML>
+
+    <script>
+        var count = 0;
+        function insane()
+        {
+            let doc = document.getElementById("crazybox");
+            for (let i = 0; i < 1000; i++){
+                doc.innerHTML = doc.innerHTML + "<FONT style='margin:0.2%;'>" + count + "</FONT>";
+                count++;
+            }
+        }
+    </script>
+
+    <HEAD>
+        <TITLE>
+            Crazy
+        </TITLE>
+    </HEAD>
+
+    <BODY style="background-image: linear-gradient(to bottom right,white, silver 80%,rgba(0, 0, 0, 0.528)); background-size: 100% 100%; min-height: 100vh;">
+        <div style="margin-left: auto; margin-right: auto;max-width: fit-content;">
+            <input type="button" value="actually crazy bro, craycray" onclick="insane()" style="font-size: xx-large;">
+        </div>
+        <div id="crazybox" style="
+        display: flex;
+        border: 10px groove rgba(175, 22, 214, 0.605);
+        border-image: linear-gradient(to bottom right, rgba(175, 22, 214, 0.605), rgba(214, 22, 22, 0.818)) 100;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 2%;
+        background-color: rgba(167, 47, 47, 0.307);
+        ">
+        
+            
+        </div>
+    </BODY>
+
+</HTML>
