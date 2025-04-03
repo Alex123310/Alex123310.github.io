@@ -1,15 +1,34 @@
 <HTML>
 
     <script>
-        var count = 0;
+        var count = 1;
+    
+        function isPrime(num) {
+            if (num <= 1) return false; // numbers less than or equal to 1 are not prime numbers
+
+            for (let j = 2, sqrt = Math.sqrt(num); j <= sqrt; j++) {
+                if (num % j === 0) return false;
+            }
+
+            return true;
+        }
+        
+
         function insane()
         {
-            let doc = document.getElementById("crazybox");
+            let doc  = document.getElementById("crazybox");
+            let docp = document.getElementById("primebox");
+
             for (let i = 0; i < 1000; i++){
                 doc.innerHTML = doc.innerHTML + "<FONT style='margin:0.2%;'>" + count + "</FONT>";
+
+                if(isPrime(count)){
+                    docp.innerHTML = docp.innerHTML + "<FONT style='margin:0.2%;'>" + count + "</FONT>";
+                }
                 count++;
             }
         }
+
     </script>
 
     <HEAD>
@@ -31,8 +50,17 @@
         margin: 2%;
         background-color: rgba(167, 47, 47, 0.307);
         ">
-        
-            
+        </div>
+
+        <div id="primebox" style="
+        display: flex;
+        border: 10px groove rgba(175, 22, 214, 0.605);
+        border-image: linear-gradient(to bottom right, rgba(175, 22, 214, 0.605), rgba(214, 22, 22, 0.818)) 100;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 2%;
+        background-color: rgba(167, 47, 47, 0.307);
+        ">
         </div>
     </BODY>
 
