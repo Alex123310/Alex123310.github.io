@@ -19,14 +19,18 @@
             let doc  = document.getElementById("crazybox");
             let docp = document.getElementById("primebox");
 
+            doc_tmp   = doc.innerHTML
+            docp_tmp  = docp.innerHTML
             for (let i = 0; i < 1000; i++){
-                doc.innerHTML = doc.innerHTML + "<FONT style='margin:0.2%; padding:1em;'>" + count + "</FONT>";
+                doc_tmp = doc_tmp + "<FONT style='margin:0.2%; padding:0.5em;'>" + count + "</FONT>";
 
                 if(isPrime(count)){
-                    docp.innerHTML = docp.innerHTML + "<FONT style='margin:0.2%;'>" + count + "</FONT>";
+                    docp_tmp = docp_tmp + "<FONT style='margin:0.2%;'>" + count + "</FONT>";
                 }
                 count++;
             }
+            doc.innerHTML  = doc_tmp;
+            docp.innerHTML = docp_tmp;
         }
 
     </script>
